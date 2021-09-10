@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class CorrectChange {
+public class DateFormat {
 
     public static void main(String[] args) {
 
