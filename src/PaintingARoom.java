@@ -3,9 +3,9 @@ import java.util.Scanner;
 public class PaintingARoom {
 
     public static void main(String[] args) {
-        int paintBucket, doorsArea, windowsArea, subtractedArea;
+        int doorsArea, windowsArea, subtractedArea;
         double roomHeight, roomWidth, roomLength, wallsAnC, wallsBnD, ceilingArea, totalWallArea, neededPaint;
-        paintBucket = 350;
+        final int paintBucket = 350;
         Scanner scan = new Scanner(System.in);
         System.out.println("Your room is square/rectangular. This is fact now.");
         System.out.print("How long is your room, in feet?   ");
@@ -26,7 +26,7 @@ public class PaintingARoom {
 
         subtractedArea = (windowsArea + doorsArea);
         totalWallArea = (wallsAnC + wallsBnD - subtractedArea);
-        neededPaint = (totalWallArea + ceilingArea);
+        neededPaint = (2 * totalWallArea + 2 * ceilingArea);
 
         System.out.println("The total area you are painting is " + (int)neededPaint + " square feet.");
         System.out.println("A single commercial bucket of paint contains 350 square feet's worth of paint");
